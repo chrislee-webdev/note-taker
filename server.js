@@ -26,7 +26,7 @@ app.get('api/notes', (req, res) => {
 //POST /api/notes should receive a new note to save on the request body and add it to the db.json file
 app.post('api/notes', (req, res) => {
     req.body.id = notes.length.toString;
-    let newNote = createNote(req.body, notes);
+    let newNote = createNote(req.body.id, notes);
     res.json(newNote);
 })
 
