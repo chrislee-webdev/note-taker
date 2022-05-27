@@ -43,6 +43,7 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
+
 app.listen(3001, () => {
     console.log(`API server now on port ${PORT}!`);
 });
