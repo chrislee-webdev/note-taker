@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const { notes } = require('./db/db.json')
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.urlencoded({
@@ -44,6 +44,6 @@ app.get('/notes', (req, res) => {
 });
 
 
-app.listen(80, () => {
+app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
